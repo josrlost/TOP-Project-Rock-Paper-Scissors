@@ -1,4 +1,11 @@
-//console.log('Hello World');
+
+//let humanScore = 0;
+//let computerScore = 0;
+//const computerChoice = getComputerChoice();
+//const humanChoice = getHumanChoice();
+
+let promptInput = prompt()
+
 
 function getComputerChoice() {
     let scissors = 'Scissors';
@@ -6,80 +13,90 @@ function getComputerChoice() {
     let rock = 'Rock';
     let randomNumber = Math.floor(Math.random() * 3) + 1;
     if(randomNumber === 1) {
-        return scissors;
+        return console.log(scissors);
     } else if(randomNumber === 2) {
-        return paper;
+        return console.log(paper);
     } else {
-        return rock;
+        return console.log(rock);
     }
 }
 
-//getComputerChoice
 
-let humanChoice = prompt('Write a valid choice', 'Scissors');
+function getHumanChoice() {
+  if(promptInput === 'Scissors') {
+    console.log('Scissors');
+  } else if(promptInput === 'Rock') {
+    console.log('Rock');
+  } else if(promptInput === 'Paper') {
+    console.log('Paper');
+}   else {
+    console.log('This is not a valid input')
+}
+}   
 
-function getHumanChoice(humanChoice) {
-   switch(humanChoice) {
-    case "Scissors" || "scissors":
-        return humanChoice;
-        break;
-    case "Paper" || "paper":
-        return humanChoice;
-        break;
-    case "Rock" || "rock":
-        return humanChoice;
-        break;
-     default:
-        return ; 
+getHumanChoice();
+
+
+
+/*
+
+function getHumanChoice(promptInput) {
+    switch(promptInput) {
+        case 'Scissors' || 'scissors':
+            promptInput;
+            break;
+        case 'Paper' || 'paper':
+            promptInput;
+            break;
+        case 'Rock' || 'rock':
+            promptInput;
+            break;
+        default:
+            promptInput; 
    }
 }
 
-//getHumanChoice
-
-let humanScore = 0;
-let computerScore = 0;
-let computerChoice = getComputerChoice();
+*/
 
 
-function playRound(humanChoice, computerChoice) {
-    switch(humanChoice, computerChoice) {
-        case 'Scissors' || 'scissors' && 'Rock':
+/*
+function playRound(humanSelection, computerChoice) {
+     switch(humanSelection, computerChoice) {
+        case ('Scissors' || 'scissors') && 'Rock':
             computerScore++;
             console.log('You lose! Rock beats scissors');
             break;
-        case 'Scissors' || 'scissors' && 'Scissors':
+        case ('Scissors' || 'scissors') && 'Scissors':
             console.log('This is Draw!, Scissors does not beat Scissors');
             break;
-        case 'Scissors' || 'scissors' && 'Paper':
+        case ('Scissors' || 'scissors') && 'Paper':
             humanScore++;
             console.log('You win! Scissors beat paper');
             break;
-        case 'Rock' || 'rock' && 'Rock':
+        case ('Rock' || 'rock') && 'Rock':
             console.log('This is a Draw! Rock does not beat Rock');
             break;
-        case 'Rock' || 'rock' && 'Scissors':
+        case ('Rock' || 'rock') && 'Scissors':
             humanScore++;
             console.log('You win! Rock beats Scissors');
             break;
-        case 'Rock' || 'rock' && 'Paper':
+        case ('Rock' || 'rock') && 'Paper':
             computerScore++;
             console.log('You lose! Rock does not beat Paper');
             break;
-        case 'Paper' || 'paper' && 'Rock':
+        case ('Paper' || 'paper') && 'Rock':
             humanScore++;
             console.log('You win! Paper beats Rock');
             break;
-        case 'Paper' || 'paper' && 'Scissors':
+        case ('Paper' || 'paper') && 'Scissors':
             computerScore++;
             console.log('You lose! Paper does not beat Scissors');
             break;
-        case 'Paper' || 'paper' && 'Paper':
+        case ('Paper' || 'paper') && 'Paper':
             console.log('This is a Draw! Paper does not bear Paper');
             break;
         default:
             console.log('That is not a valid input, reload the page and try again!')
     }
 }
-
-playRound(humanChoice, computerChoice);
-
+*/
