@@ -16,10 +16,10 @@ function getComputerChoice() {
 
 //getComputerChoice
 
-let choice = prompt('Write a valid choice', 'Scissors');
+let humanChoice = prompt('Write a valid choice', 'Scissors');
 
-function getHumanChoice(choice) {
-   switch(choice) {
+function getHumanChoice(humanChoice) {
+   switch(humanChoice) {
     case "Scissors" || "scissors":
         console.log(getComputerChoice());
         break;
@@ -34,4 +34,9 @@ function getHumanChoice(choice) {
    }
 }
 
-getHumanChoice(choice);
+getHumanChoice(humanChoice);
+
+let humanScore = 0;
+let computer = 0;
+
+
