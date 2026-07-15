@@ -29,8 +29,8 @@ function getHumanChoice(humanChoice) {
     case "Rock" || "rock":
         return humanChoice;
         break;
-   /* default:
-        console.log('Sorry that is not a valid input'); */
+     default:
+        return ; 
    }
 }
 
@@ -40,36 +40,46 @@ let humanScore = 0;
 let computerScore = 0;
 let computerChoice = getComputerChoice();
 
-function recordScore(humanChoice, computerChoice) {
+
+function playRound(humanChoice, computerChoice) {
     switch(humanChoice, computerChoice) {
         case 'Scissors' || 'scissors' && 'Rock':
-            console.log(computerScore++);
+            computerScore++;
+            console.log('You lose! Rock beats scissors');
             break;
         case 'Scissors' || 'scissors' && 'Scissors':
-            console.log('Draw');
+            console.log('This is Draw!, Scissors does not beat Scissors');
             break;
         case 'Scissors' || 'scissors' && 'Paper':
-            console.log(humanScore++);
+            humanScore++;
+            console.log('You win! Scissors beat paper');
             break;
         case 'Rock' || 'rock' && 'Rock':
-            console.log('Draw');
+            console.log('This is a Draw! Rock does not beat Rock');
             break;
         case 'Rock' || 'rock' && 'Scissors':
-            console.log(humanScore++);
+            humanScore++;
+            console.log('You win! Rock beats Scissors');
             break;
         case 'Rock' || 'rock' && 'Paper':
-            console.log(computerScore++);
+            computerScore++;
+            console.log('You lose! Rock does not beat Paper');
             break;
         case 'Paper' || 'paper' && 'Rock':
-            console.log(humanScore++);
+            humanScore++;
+            console.log('You win! Paper beats Rock');
             break;
         case 'Paper' || 'paper' && 'Scissors':
-            console.log(computerScore++);
+            computerScore++;
+            console.log('You lose! Paper does not beat Scissors');
             break;
         case 'Paper' || 'paper' && 'Paper':
-            console.log('Draw');
+            console.log('This is a Draw! Paper does not bear Paper');
             break;
+        default:
+            console.log('That is not a valid input, reload the page and try again!')
     }
 }
 
-recordScore(humanChoice, computerChoice);
+playRound(humanChoice, computerChoice);
+
