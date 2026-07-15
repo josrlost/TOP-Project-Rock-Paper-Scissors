@@ -5,7 +5,6 @@ let computerScore = 0;
 const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
 */
-let promptInput = () => prompt();
 
 
 function getComputerChoice() {
@@ -22,14 +21,13 @@ function getComputerChoice() {
     }
 }
 
-/*
 function getHumanChoice() {
-    
+    let askQuestion = () => prompt();
     let scissors = 'Scissors';
     let rock = 'Rock';
     let paper = 'Paper';
     let message = 'This is not a valid input';
-    switch(promptInput) {
+    switch(askQuestion().toLowerCase()) {
         case 'scissors':
         console.log(scissors);
         break;
@@ -44,8 +42,5 @@ function getHumanChoice() {
     }
 
 }   
-*/
 
-function playRound(humanSelection, computerSelection) {
-
-}
+getHumanChoice();
