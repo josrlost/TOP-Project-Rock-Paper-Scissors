@@ -6,11 +6,11 @@ function getComputerChoice() {
     let rock = 'Rock';
     let randomNumber = Math.floor(Math.random() * 3) + 1;
     if(randomNumber === 1) {
-        return console.log(scissors);
+        return scissors;
     } else if(randomNumber === 2) {
-        return console.log(paper);
+        return paper;
     } else {
-        return console.log(rock);
+        return rock;
     }
 }
 
@@ -21,22 +21,55 @@ let humanChoice = prompt('Write a valid choice', 'Scissors');
 function getHumanChoice(humanChoice) {
    switch(humanChoice) {
     case "Scissors" || "scissors":
-        console.log(getComputerChoice());
+        return humanChoice;
         break;
     case "Paper" || "paper":
-        console.log(getComputerChoice());
+        return humanChoice;
         break;
     case "Rock" || "rock":
-        console.log(getComputerChoice());
+        return humanChoice;
         break;
-    default:
-        console.log('Sorry that is not a valid input');
+   /* default:
+        console.log('Sorry that is not a valid input'); */
    }
 }
 
-getHumanChoice(humanChoice);
+//getHumanChoice
 
 let humanScore = 0;
-let computer = 0;
+let computerScore = 0;
+let computerChoice = getComputerChoice();
 
+function recordScore(humanChoice, computerChoice) {
+    switch(humanChoice, computerChoice) {
+        case 'Scissors' || 'scissors' && 'Rock':
+            console.log(computerScore++);
+            break;
+        case 'Scissors' || 'scissors' && 'Scissors':
+            console.log('Draw');
+            break;
+        case 'Scissors' || 'scissors' && 'Paper':
+            console.log(humanScore++);
+            break;
+        case 'Rock' || 'rock' && 'Rock':
+            console.log('Draw');
+            break;
+        case 'Rock' || 'rock' && 'Scissors':
+            console.log(humanScore++);
+            break;
+        case 'Rock' || 'rock' && 'Paper':
+            console.log(computerScore++);
+            break;
+        case 'Paper' || 'paper' && 'Rock':
+            console.log(humanScore++);
+            break;
+        case 'Paper' || 'paper' && 'Scissors':
+            console.log(computerScore++);
+            break;
+        case 'Paper' || 'paper' && 'Paper':
+            console.log('Draw');
+            break;
+    }
+}
 
+recordScore(humanChoice, computerChoice);
