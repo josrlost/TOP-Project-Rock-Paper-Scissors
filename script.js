@@ -1,12 +1,11 @@
 
-/*
+
 let humanScore = 0;
 let computerScore = 0;
-const computerSelection = getComputerChoice();
-const humanSelection = getHumanChoice();
-*/
+const computerSelection = () => getComputerChoice();
+const humanSelection = () => getHumanChoice();
 
-
+// STEP 2: Write the logic to get computer choice
 function getComputerChoice() {
     let scissors = 'Scissors';
     let paper = 'Paper';
@@ -21,6 +20,7 @@ function getComputerChoice() {
     }
 }
 
+// STEP 3: Write the logic to get human choice
 function getHumanChoice() {
     let askQuestion = () => prompt();
     let scissors = 'Scissors';
@@ -43,4 +43,4 @@ function getHumanChoice() {
 
 }   
 
-getHumanChoice();
+//getHumanChoice();
