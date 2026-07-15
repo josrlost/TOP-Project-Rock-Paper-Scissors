@@ -1,0 +1,5 @@
+TOP Project: Rock-Paper-Scissors
+
+Created a rock-paper-scissors interactive game con the JavaScript console that responds and adjust to the user's input and keeps a record of the score.
+It also announces a winner, and repeats itself for 5 rounds. This project uses multiple call back functions, nested functions, nested loops,
+swicth statements. It also uses arrow functions for function expresions. 
