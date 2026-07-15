@@ -14,5 +14,24 @@ function getComputerChoice() {
     }
 }
 
-getComputerChoice();
+//getComputerChoice
 
+let choice = prompt('Write a valid choice', 'Scissors');
+
+function getHumanChoice(choice) {
+   switch(choice) {
+    case "Scissors" || "scissors":
+        console.log(getComputerChoice());
+        break;
+    case "Paper" || "paper":
+        console.log(getComputerChoice());
+        break;
+    case "Rock" || "rock":
+        console.log(getComputerChoice());
+        break;
+    default:
+        console.log('Sorry that is not a valid input');
+   }
+}
+
+getHumanChoice(choice);
